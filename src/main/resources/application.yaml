@@ -19,4 +19,5 @@ spring:
       settings:
         web-allow-others: false
 
+
 # http://localhost:8189/app/h2-console
