@@ -1,11 +1,13 @@
 package ru.bor.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Table(name = "students")
 public class Student {
