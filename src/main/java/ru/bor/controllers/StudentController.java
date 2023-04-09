@@ -3,7 +3,6 @@ package ru.bor.controllers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import ru.bor.dto.StudentDto;
-import ru.bor.entities.Student;
 import ru.bor.services.StudentService;
 
 import java.util.List;
@@ -26,6 +25,12 @@ public class StudentController {
     @DeleteMapping("/{id}")
     public List<StudentDto> removeStudent(@PathVariable Long id){
         studentService.removeStudent(id);
+        return studentService.getAllStudent();
+    }
+    @PostMapping("/{old_id}")
+    public List<StudentDto> editStudent(@PathVariable Long old_id,
+                                        @RequestBody StudentDto editStudent){
+        studentService.editStudent(old_id, editStudent);
         return studentService.getAllStudent();
     }
 

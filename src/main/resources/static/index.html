@@ -47,6 +47,22 @@
                 </label>
                 <button class="btn btn-success" type="submit" >Сохранить</button>
             </form>
+
+            <h2>Редактировать студента</h2>
+            <form ng-submit="editStudentById()">
+                <label>
+                    <input type="number" name="old_id" ng-model="old_id" id="old_id" placeholder="old_id" required>
+                </label>
+
+                <label>
+                    <input type="text" name="new_name" ng-model="editStudent.name" id="new_name" placeholder="new_name" required>
+                </label>
+
+                <label>
+                    <input type="number" name="new_age" ng-model="editStudent.age" id="new_age" placeholder="new_age" required>
+                </label>
+                <button class="btn btn-success" type="submit" >Изменить</button>
+            </form>
         </div>
     </body>
 </html>

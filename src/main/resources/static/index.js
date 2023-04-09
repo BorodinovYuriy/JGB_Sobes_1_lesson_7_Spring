@@ -26,6 +26,14 @@ angular.module('app',[]).controller('indexController', function($scope, $http){
                 /*location.reload();*/
             });
     };
+//Редактирование студента
+    $scope.editStudentById = function(){
+                $http.post(contextPath + '/' + $scope.old_id, $scope.editStudent)
+                .then(function(response) {
+                    $scope.studentList = response.data;
+                    /*location.reload();*/
+                });
+        };
 
     $scope.fillTable();
 
