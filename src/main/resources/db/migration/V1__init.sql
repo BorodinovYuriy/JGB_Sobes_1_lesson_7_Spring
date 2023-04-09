@@ -17,3 +17,4 @@ insert into students (name, age) values
 ('Student_11', 18),
 ('Student_12', 24)
 ;
+
